@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sakura Nihongo</title>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #f0f4f8 0%, #feecee 100%);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1572906091598-3d8ebbc3a0f6') center/cover no-repeat;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    header button {
+      background-color: #a11b36;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #a11b36;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      color: #a11b36;
+      margin-bottom: 1.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: #a11b36;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+    }
+
+    .levels {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media(min-width: 768px) {
+      .levels { flex-direction: row; justify-content: space-between; }
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .level-box {
+      flex: 1;
+      background-color: #f0f2f5;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .member {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .member img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #a11b36;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+  background-color: #a11b36 !important;
+  color: white !important;
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer a {
+  color: #f9ccd4 !important;
+      color: #a11b36;
+      text-decoration: none;
+    }
+  </style>
+<style>
+.levels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.level-card {
+  background: white;
+  border: 2px solid #f9ccd4;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-color: #d9374e;
+}
+
+.level-card .emoji {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.level-card .title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #a11b36;
+  margin-bottom: 0.5rem;
+}
+
+.level-card .desc {
+  font-size: 0.95rem;
+  color: #333;
+}
+</style>
+</head>
+<body>
+<header style="height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&amp;fit=crop&amp;w=1500&amp;q=80') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 2rem;">
+<h1>Sakura Nihongo</h1>
+<p>Lerne Japanisch mit Struktur, Nähe und moderner Didaktik – von Muttersprachler:innen aus Japan.</p>
+<a href="#kontakt" style="background-color:#a11b36; color:white; padding:0.9rem 1.8rem; border-radius:30px; text-decoration:none; font-size:1.1rem; font-weight:600; display:inline-block; margin-top:1rem;">Jetzt kostenlos testen</a>
+</header>
+<nav>
+<a href="#inhalte">Inhalte</a>
+<a href="#kurse">Kurse</a>
+<a href="#team">Team</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+<section id="inhalte" style="border-left: 5px solid #a11b36;">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Was du bei uns lernst</h2>
+<p style="text-align:center">Wir begleiten dich vom ersten Zeichen bis zu fließenden Gesprächen – strukturiert und individuell.</p>
+<div class="tags">
+<div class="tag">Hiragana</div>
+<div class="tag">Katakana</div>
+<div class="tag">Kanji</div>
+<div class="tag">Grammatik</div>
+<div class="tag">Hörverstehen</div>
+<div class="tag">Sprechen</div>
+<div class="tag">JLPT-Training</div>
+<div class="tag">Kultur</div>
+</div>
+</section>
+<section id="kurse" style="padding-top: 4rem;">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Wähle dein Level</h2>
+<div class="levels" style="flex-direction: column;">
+<div class="level-box" style="background:#feecee; border:2px solid #f9ccd4; border-radius:12px; padding:1.5rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.04); transition:all 0.3s ease;">
+<p>Perfekt für Anfänger:innen ohne Vorkenntnisse. Wir starten gemeinsam bei Null.</p>
+</div>
+<div class="level-box" style="background:#feecee; border:2px solid #f9ccd4; border-radius:12px; padding:1.5rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.04); transition:all 0.3s ease;">
+<p>Du verstehst die Grundlagen? Dann verfeinere dein Vokabular und Satzstruktur.</p>
+</div>
+<div class="level-box">
+</div>
+</div>
+</section>
+<section id="ueberuns">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Über Sakura Nihongo</h2>
+<p style="text-align:center; max-width: 800px; margin: 0 auto 2rem;">Sakura Nihongo ist eine Sprachschule, die moderne Online-Methoden mit echter menschlicher Nähe kombiniert. Unser Ziel ist es, Japanisch für alle zugänglich, verständlich und kulturell authentisch zu vermitteln. Wir setzen auf kleine Gruppen, persönliche Betreuung und inspirierende Inhalte. Ob beruflich, privat oder aus Liebe zur Sprache – bei uns bist du richtig.</p>
+</section>
+<section id="team">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Unsere Trainer:innen</h2>
+<div class="team">
+<div class="member">
+<img alt="Lehrerin Yuki" src="https://randomuser.me/api/portraits/women/44.jpg"/>
+<h4>Yuki Tanaka</h4>
+<p>Sprachcoach für Anfänger &amp; JLPT</p>
+</div>
+<div class="member">
+<img alt="Lehrer Kenji" src="https://randomuser.me/api/portraits/men/35.jpg"/>
+<h4>Kenji Ito</h4>
+<p>Business-Japanisch &amp; Kommunikation</p>
+</div>
+<div class="member">
+<img alt="Lehrerin Ai" src="https://randomuser.me/api/portraits/women/68.jpg"/>
+<h4>Ai Nakamura</h4>
+<p>Kanji, Leseverstehen &amp; Konversation</p>
+</div>
+</div>
+</section>
+<section id="galerie" style="padding: 4rem 1rem; background: #f5f5f0;">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Einblicke in die japanische Kultur</h2>
+<p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Visuelle Eindrücke unserer Inhalte, Umgebung und Inspirationen direkt aus Japan.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+<img src="japanese-umbrellas-636870_1280?auto=format&amp;fit=crop&amp;w=600&amp;q=80" style="border-radius: 10px; width: 300px; height: 200px; object-fit: cover;"/>
+<img src="japan-6281561_1280?auto=format&amp;fit=crop&amp;w=600&amp;q=80" style="border-radius: 10px; width: 300px; height: 200px; object-fit: cover;"/>
+<img src="kyoto-3832797_1280?auto=format&amp;fit=crop&amp;w=600&amp;q=80" style="border-radius: 10px; width: 300px; height: 200px; object-fit: cover;"/>
+<img src="kimono-5507132_1280?auto=format&amp;fit=crop&amp;w=600&amp;q=80" style="border-radius: 10px; width: 300px; height: 200px; object-fit: cover;"/>
+<img src="japan-6608075_1280?auto=format&amp;fit=crop&amp;w=600&amp;q=80" style="border-radius: 10px; width: 300px; height: 200px; object-fit: cover;"/>
+</div>
+</section>
+<section id="feedback" style="padding: 4rem 1rem; background: #feecee;">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Das sagen unsere Lernenden</h2>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:2rem;">
+<div style="max-width:300px; background:#f9f5f3; padding:1.5rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+<p style="font-style:italic;">„Ich hätte nie gedacht, dass ich einmal Japanisch lesen kann – dank Sakura Nihongo macht es einfach Spaß!“</p>
+<p style="margin-top:1rem; font-weight:600;">– Lisa, 27</p>
+</div>
+<div style="max-width:300px; background:#f9f5f3; padding:1.5rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+<p style="font-style:italic;">„Die Lehrer:innen sind so geduldig und motivierend. Ich fühle mich richtig abgeholt.“</p>
+<p style="margin-top:1rem; font-weight:600;">– Ben, 33</p>
+</div>
+<div style="max-width:300px; background:#f9f5f3; padding:1.5rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+<p style="font-style:italic;">„Ich kann mittlerweile mit meiner Schwiegermutter in Japan sprechen – danke für diesen Kurs!“</p>
+<p style="margin-top:1rem; font-weight:600;">– Mia, 41</p>
+</div>
+</div>
+</section>
+<section id="kontakt" style="background:#f9f5f3; border-top: 4px dashed #a11b36;">
+<h2 style="text-align: center; font-size: 2rem; color: #a11b36; margin-bottom: 1.5rem;">Jetzt anmelden</h2>
+<p style="text-align:center">Schreibe uns direkt – wir melden uns mit weiteren Infos!</p>
+<form>
+<input name="name" placeholder="Dein Name" required="" type="text"/>
+<input name="email" placeholder="Deine E-Mail" required="" type="email"/>
+<textarea name="nachricht" placeholder="Deine Nachricht oder Frage" rows="4"></textarea>
+<button type="submit">Absenden</button>
+</form>
+</section>
+<footer>
+<p>© 2025 Sakura Nihongo. Alle Rechte vorbehalten.</p>
+<p><a href="#">Datenschutz</a> · <a href="#">Impressum</a></p>
+</footer>
+</body>
+</html>
