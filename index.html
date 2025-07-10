@@ -74,6 +74,7 @@
       max-width: 1200px;
       margin: auto;
     }
+    /*
     .features .box {
       flex: 1;
       text-align: center;
@@ -86,7 +87,37 @@
     }
     .features .box:hover {
       transform: translateY(-5px);
-    }
+    } 
+    */
+    .features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-top: -60px; /* leicht überlappend */
+}
+
+.feature-box {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-box img {
+  width: 32px;
+  height: 32px;
+}
+
+    
     .features.flex {
       justify-content: space-between;
     }
@@ -206,7 +237,7 @@
   <div class="box">🛡️ Beratung & Schutz</div>
 </section>
 -->
-  <section class="features flex"> // neu
+<!--  <section class="features flex"> // neu
     <div class="box">
       <img src="check_1828697.png" alt="Icon 1">
       <span>Starke<br>Interessenvertretung</span>
@@ -220,7 +251,28 @@
       <span>Beratung & Schutz</span>
     </div>
   </section>
-
+-->
+<section class="features">
+  <div class="feature-box">
+    <img src="check_1828697.png" alt="Check Icon">
+    <div>
+      <strong>Starke<br>Interessenvertretung</strong>
+    </div>
+  </div>
+  <div class="feature-box">
+    <img src="menu_1828863.png" alt="Dokument Icon">
+    <div>
+      <strong>Hilfe bei<br>rechtlichen Fragen</strong>
+    </div>
+  </div>
+  <div class="feature-box">
+    <img src="icon3.png" alt="Schutz Icon">
+    <div>
+      <strong>Beratung & Schutz</strong>
+    </div>
+  </div>
+</section>
+  
 <section class="news">
   <h2>News & Aktuelle Entwicklungen</h2>
   <p>Lorem ipsum dolor sit ame zushyjx uishdxshcdjs asxhuaxuia asdxhuiahui sadzxhiuadiu asxhiauh</p>
@@ -268,7 +320,7 @@
   </div>
 </section>
 
- <section class="image-strip"> //Bilderreihe 
+ <section class="image-strip">
     <img src="istockphoto-153484912-612x612.jpg" alt="Bild 1">
     <img src="istockphoto-471960719-612x612.jpg" alt="Bild 2">
     <img src="soldier-4768766_640.jpg" alt="Bild 3">
@@ -297,7 +349,7 @@
     <p>+49 123 456789<br>info@beispiel.de</p>
   </div>
   <div>
-    <h4>Folge uns</h4> // Icons
+    <h4>Folge uns</h4>
     <p>
       <img src="1940929_facebook_media_online_social_icon.png" alt="Facebook" width="20"> Facebook<br>
       <img src="1940915_media_online_social_twitter_icon.png" alt="Twitter" width="20"> Twitter<br>
