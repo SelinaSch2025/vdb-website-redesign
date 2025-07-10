@@ -27,12 +27,29 @@
       font-weight: bold;
     }
     .hero {
-      background-image: url('istockphoto-1304003834-612x612.jpg'); /* Hier Link zum Header-/Hero-Bild einfügen */
+      background-image: url('istockphoto-1304003834-612x612.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
       padding: 120px 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      z-index: 0;
+    }
+    .hero h1,
+    .hero p,
+    .hero .btn-red {
+      position: relative;
+      z-index: 1;
     }
     .hero h1 {
       font-family: 'Montserrat', sans-serif;
@@ -57,12 +74,30 @@
       max-width: 1200px;
       margin: auto;
     }
-    .features .box, .news .box, .faq .box {
-      background: white;
+    .features .box {
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
       padding: 20px;
-      margin: 10px;
+      background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .features .box:hover {
+      transform: translateY(-5px);
+    }
+    .features.flex {
+      justify-content: space-between;
+    }
+    .news .box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .news .box {
+      flex: 1;
+      min-width: 280px;
     }
     .flex {
       display: flex;
@@ -134,7 +169,7 @@
 <body>
 
 <header>
-  <img src="vdb-logo.png" alt="VDB Logo"> <!-- Hier Bild-Link zum Logo einfügen -->
+  <img src="vdb-logo.png" alt="VDB Logo">
   <nav>
     <a href="#">Home</a>
     <a href="#">Mitglieder</a>
@@ -160,15 +195,15 @@
   <p>Lorem ipsum dolor sit amet…</p>
   <div class="flex">
     <div class="box">
-      <img src="istockphoto-1383131935-612x612.jpg" alt="News1"> <!-- Bild-Link News 1 -->
+      <img src="istockphoto-1383131935-612x612.jpg" alt="News1">
       <p><strong>19.06.2025</strong><br>News Titel</p>
     </div>
     <div class="box">
-      <img src="istockphoto-629018934-612x612.jpg" alt="News2"> <!-- Bild-Link News 2 -->
+      <img src="istockphoto-629018934-612x612.jpg" alt="News2">
       <p><strong>01.06.2025</strong><br>News Titel</p>
     </div>
     <div class="box">
-      <img src="istockphoto-853736544-612x612.jpg" alt="News3"> <!-- Bild-Link News 3 -->
+      <img src="istockphoto-853736544-612x612.jpg" alt="News3">
       <p><strong>24.05.2025</strong><br>News Titel</p>
     </div>
   </div>
@@ -237,3 +272,4 @@
 
 </body>
 </html>
+
