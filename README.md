@@ -1,4 +1,14 @@
 # vdb-website-redesign
 Website-Mockup &amp; Dokumentation im Rahmen des Assignments 5 – Hochschule Kaiserslautern, SS 2025
-📄 GIMP Mockup für die optimierte VDB-Startseite:
-[Download website_assigment5_kopie.xcf](./website_assigment5_kopie.xcf)
+# Website Optimization & Link Promotion – Assignment 5
+
+## 🔧 Website Mockup
+Die Startseite der optimierten VDB-Website wurde mit GIMP erstellt.
+
+➡️ [Download der GIMP-Datei (XCF)](./website_assigment5_kopie.xcf)
+
+Die Datei zeigt:
+- neues Header-Design mit sichtbarem Logo
+- optimierte Navigation
+- CTAs („Mitglied werden“) prominent gesetzt
+- Farbkontrast angepasst
