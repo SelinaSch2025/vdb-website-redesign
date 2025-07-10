@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VDB Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #1E2A38;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #1E2A38;
+      font-weight: bold;
+    }
+    .hero {
+      background-image: url('https://via.placeholder.com/1600x600');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .btn-red {
+      background-color: #C53030;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .features, .news, .mitgliedschaft, .faq, .search-section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .features .box, .news .box, .faq .box {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .mitgliedschaft {
+      background: #ffffff;
+    }
+    .search-section {
+      background: #e5e7eb;
+      text-align: center;
+    }
+    .search-section input {
+      padding: 12px;
+      width: 60%;
+      max-width: 500px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .search-section button {
+      padding: 12px 20px;
+      background: #1E2A38;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    footer {
+      background: #1E2A38;
+      color: white;
+      padding: 60px 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    footer h4 {
+      margin-top: 0;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+    }
+    footer input {
+      padding: 10px;
+      width: 80%;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: none;
+    }
+    footer button {
+      background: #C53030;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 4px;
+    }
+    .copyright {
+      text-align: center;
+      background: #0f172a;
+      color: #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://via.placeholder.com/120x40?text=VDB" alt="VDB Logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Mitglieder</a>
+    <a href="#">Service</a>
+    <a href="#">Über uns</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Ihre Stimme für den legalen Waffenbesitz in Deutschland</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor…</p>
+  <a class="btn-red" href="#">MITGLIED WERDEN</a>
+</section>
+
+<section class="features flex">
+  <div class="box">✔️ Starke Interessenvertretung</div>
+  <div class="box">📘 Hilfe bei rechtlichen Fragen</div>
+  <div class="box">🛡️ Beratung & Schutz</div>
+</section>
+
+<section class="news">
+  <h2>News & Aktuelle Entwicklungen</h2>
+  <p>Lorem ipsum dolor sit amet…</p>
+  <div class="flex">
+    <div class="box">
+      <img src="https://via.placeholder.com/300x150" alt="News1">
+      <p><strong>19.06.2025</strong><br>News Titel</p>
+    </div>
+    <div class="box">
+      <img src="https://via.placeholder.com/300x150" alt="News2">
+      <p><strong>01.06.2025</strong><br>News Titel</p>
+    </div>
+    <div class="box">
+      <img src="https://via.placeholder.com/300x150" alt="News3">
+      <p><strong>24.05.2025</strong><br>News Titel</p>
+    </div>
+  </div>
+</section>
+
+<section class="mitgliedschaft flex">
+  <div style="flex: 2">
+    <h2>Mitgliedschaft</h2>
+    <p>Lorem ipsum dolor sit amet…</p>
+    <a href="#">weiter lesen</a>
+  </div>
+  <div style="flex: 1">
+    <ul>
+      <li>✔ Erfahrungsberichte</li>
+      <li>✔ Exklusiver Service</li>
+      <li>✔ Beratung</li>
+    </ul>
+    <a class="btn-red" href="#">MITGLIED WERDEN</a>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Andere fragten auch …</h2>
+  <div class="flex">
+    <div class="box">Wie viel kostet die Mitgliedschaft?</div>
+    <div class="box">Wofür brauche ich sie?</div>
+    <div class="box">Was beinhaltet sie?</div>
+    <div class="box">Kann man kündigen?</div>
+  </div>
+</section>
+
+<section class="search-section">
+  <h2>Finde einen Händler in deiner Nähe</h2>
+  <input type="text" placeholder="Suche eingeben ...">
+  <button>Suchen</button>
+</section>
+
+<footer>
+  <div>
+    <h4>Navigation</h4>
+    <a href="#">Mitgliedschaft</a>
+    <a href="#">Marktplatz</a>
+    <a href="#">Händler finden</a>
+    <a href="#">Über uns</a>
+    <a href="#">Presse</a>
+  </div>
+  <div>
+    <h4>Kontakt</h4>
+    <p>Musterstr. 123<br>12345 Musterstadt</p>
+    <p>+49 123 456789<br>info@beispiel.de</p>
+  </div>
+  <div>
+    <h4>Folge uns</h4>
+    <p>🔗 Facebook<br>🔗 Twitter<br>🔗 LinkedIn</p>
+  </div>
+  <div>
+    <h4>Newsletter</h4>
+    <p>Abonnieren Sie unseren Newsletter</p>
+    <input type="email" placeholder="E-Mail Adresse">
+    <button>ABONNIEREN</button>
+  </div>
+</footer>
+<div class="copyright">
+  © 2025 Beispiel GmbH &nbsp; | &nbsp; <a href="#">Datenschutz</a> &nbsp; | &nbsp; <a href="#">Impressum</a>
+</div>
+
+</body>
+</html>
