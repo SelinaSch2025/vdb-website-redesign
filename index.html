@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VDB Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Myanmar+Text:wght@700&family=Arial&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+      background-color: #D6D6D6;
       color: #1E2A38;
     }
     header {
@@ -24,6 +24,7 @@
       margin-left: 20px;
       text-decoration: none;
       color: #1E2A38;
+      font-family: 'Myanmar Text', sans-serif;
       font-weight: bold;
     }
     .hero {
@@ -42,7 +43,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(30, 42, 56, 0.6);
       z-index: 0;
     }
     .hero h1,
@@ -52,14 +53,16 @@
       z-index: 1;
     }
     .hero h1 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Myanmar Text', sans-serif;
       font-size: 36px;
       margin-bottom: 20px;
+      font-weight: bold;
     }
     .hero p {
       max-width: 700px;
       margin: 0 auto 30px;
       font-style: italic;
+      font-family: 'Arial', sans-serif;
     }
     .btn-red {
       background-color: #C53030;
@@ -69,8 +72,9 @@
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Myanmar Text', sans-serif;
     }
-    .features, .news, .mitgliedschaft, .faq, .search-section {
+    .features, .news, .mitgliedschaft, .faq, .search-section, .footer-section {
       padding: 60px 40px;
       max-width: 1200px;
       margin: auto;
@@ -80,7 +84,7 @@
       text-align: left;
       font-weight: bold;
       padding: 20px;
-      background: #fff;
+      background: #ffffff;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       transition: transform 0.2s;
@@ -88,6 +92,7 @@
       align-items: center;
       gap: 15px;
       min-height: 100px;
+      font-family: 'Myanmar Text', sans-serif;
     }
     .features .box img {
       width: 40px;
@@ -100,79 +105,125 @@
       justify-content: center;
       gap: 30px;
     }
-    .news .box img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .news .box {
-      flex: 1;
-      min-width: 280px;
-    }
     .flex {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
-    .mitgliedschaft {
-      background: #ffffff;
-    }
-    .search-section {
-      background: #e5e7eb;
+    .news {
+      background: #C7C7C7;
       text-align: center;
     }
-    .search-section input {
-      padding: 12px;
-      width: 60%;
-      max-width: 500px;
-      margin-right: 10px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+    .news h2 {
+      font-family: 'Myanmar Text', sans-serif;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
-    .search-section button {
-      padding: 12px 20px;
+    .news p {
+      max-width: 800px;
+      margin: auto;
+      font-family: 'Arial', sans-serif;
+    }
+    .news-items {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .news-card {
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 250px;
+      text-align: left;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+    }
+    .news-card img {
+      width: 100%;
+      height: auto;
+    }
+    .news-card .content {
+      padding: 10px;
+    }
+    .mitgliedschaft {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .mitgliedschaft .text, .mitgliedschaft .list {
+      flex: 1;
+      min-width: 300px;
+    }
+    .mitgliedschaft h2, .faq h2 {
+      font-family: 'Myanmar Text', sans-serif;
+    }
+    .mitgliedschaft p, .faq p, .faq-item {
+      font-family: 'Arial', sans-serif;
+    }
+    .faq h2 {
+      text-align: center;
+    }
+    .faq-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    .faq-item {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+    .search-section {
+      background: #D6D6D6;
+      text-align: center;
+    }
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .search-bar input {
+      width: 400px;
+      padding: 10px;
+    }
+    .image-strip {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .image-strip img {
+      width: 20%;
+    }
+    .footer-section {
       background: #1E2A38;
       color: white;
-      border: none;
-      border-radius: 4px;
+      font-family: 'Arial', sans-serif;
     }
-    footer {
-      background: #1E2A38;
-      color: white;
-      padding: 60px 40px;
+    .footer-section h4 {
+      font-family: 'Myanmar Text', sans-serif;
+    }
+    .footer-columns {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    footer h4 {
-      margin-top: 0;
+    .footer-columns div {
+      margin: 20px;
     }
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      display: block;
-      margin: 4px 0;
-    }
-    footer input {
-      padding: 10px;
-      width: 80%;
-      margin: 10px 0;
-      border-radius: 4px;
-      border: none;
-    }
-    footer button {
-      background: #C53030;
-      border: none;
-      padding: 10px 20px;
+    .footer-columns a {
       color: white;
-      border-radius: 4px;
+      display: block;
+      margin-top: 5px;
+      text-decoration: none;
     }
-    .copyright {
-      text-align: center;
-      background: #0f172a;
-      color: #ccc;
-      padding: 10px;
-      font-size: 14px;
+    .footer-columns img {
+      margin-right: 8px;
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -211,19 +262,22 @@
 
 <section class="news">
   <h2>News & Aktuelle Entwicklungen</h2>
-  <p>Lorem ipsum dolor sit amet…</p>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
   <div class="flex">
     <div class="box">
       <img src="istockphoto- 1383131935-612x612.jpg" alt="News1">
-      <p><strong>19.06.2025</strong><br>News Titel</p>
+      <p><strong>19.06.2025</strong><br>Neues Gesetz</p>
+      <p>Ut labore et dolore magna aliquyam erat.</p>
     </div>
     <div class="box">
       <img src="istockphoto-629018934-612x612.jpg" alt="News2">
-      <p><strong>01.06.2025</strong><br>News Titel</p>
+      <p><strong>01.06.2025</strong><br>Eventbericht</p>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
     </div>
     <div class="box">
       <img src="istockphoto-853736544-612x612.jpg" alt="News3">
-      <p><strong>24.05.2025</strong><br>News Titel</p>
+      <p><strong>24.05.2025</strong><br>Neue Kooperationen</p>
+      <p>Stet clita kasd gubergren, no sea takimata sanctus est.</p>
     </div>
   </div>
 </section>
@@ -231,7 +285,7 @@
 <section class="mitgliedschaft flex">
   <div style="flex: 2">
     <h2>Mitgliedschaft</h2>
-    <p>Lorem ipsum dolor sit amet…</p>
+    <p>Sie wollen unsere Arbeit unterstützen und Teil einer starken Gemeinschaft werden? Dann werden Sie jetzt Mitglied!</p>
     <a href="#">weiter lesen</a>
   </div>
   <div style="flex: 1">
@@ -239,55 +293,85 @@
       <li>✔ Erfahrungsberichte</li>
       <li>✔ Exklusiver Service</li>
       <li>✔ Beratung</li>
+      <li>✔ Rechtlicher Beistand</li>
+      <li>✔ Vertretung in Politik & Medien</li>
     </ul>
     <a class="btn-red" href="#">MITGLIED WERDEN</a>
   </div>
 </section>
 
 <section class="faq">
-  <h2>Andere fragten auch …</h2>
-  <div class="flex">
-    <div class="box">Wie viel kostet die Mitgliedschaft?</div>
-    <div class="box">Wofür brauche ich sie?</div>
-    <div class="box">Was beinhaltet sie?</div>
-    <div class="box">Kann man kündigen?</div>
-  </div>
-</section>
+    <h2>Häufige Fragen</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <strong>Wie werde ich Mitglied?</strong>
+        <p>Ganz einfach online registrieren und Mitgliedsformular ausfüllen.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Welche Vorteile habe ich?</strong>
+        <p>Politische Interessenvertretung, Beratung, Informationen und vieles mehr.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Was kostet eine Mitgliedschaft?</strong>
+        <p>Die Beiträge variieren je nach Mitgliedsart, beginnend ab 5€ pro Monat.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Wie kann ich kündigen?</strong>
+        <p>Jederzeit schriftlich mit einer Frist von 4 Wochen zum Monatsende.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="search-section">
-  <h2>Finde einen Händler in deiner Nähe</h2>
-  <input type="text" placeholder="Suche eingeben ...">
-  <button>Suchen</button>
-</section>
+  <section class="image-strip">
+    <img src="istockphoto-153484912-612x612.jpg" alt="Bild 1">
+    <img src="istockphoto-471960719-612x612.jpg" alt="Bild 2">
+    <img src="soldier-4768766_640.jpg" alt="Bild 3">
+    <img src="airsoft-3749270_640.jpg" alt="Bild 4">
+    <img src="istockphoto-1132735794-612x612.jpg" alt="Bild 5">
+  </section>
 
-<footer>
-  <div>
-    <h4>Navigation</h4>
-    <a href="#">Mitgliedschaft</a>
-    <a href="#">Marktplatz</a>
-    <a href="#">Händler finden</a>
-    <a href="#">Über uns</a>
-    <a href="#">Presse</a>
+  <section class="search-section">
+    <h2>Was suchen Sie?</h2>
+    <div class="search-bar">
+      <input type="text" placeholder="Suchbegriff eingeben">
+      <button>Suchen</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-section">
+  <div class="footer-columns">
+    <div>
+      <h4>NAVIGATION</h4>
+      <a href="#">Mitgliedschaft</a>
+      <a href="#">Marktplatz</a>
+      <a href="#">Händler finden</a>
+      <a href="#">Über uns</a>
+      <a href="#">Presse</a>
+      <a href="#">Kontakt</a>
+    </div>
+    <div>
+      <h4>KONTAKT</h4>
+      <p>Musterstr. 123<br>12345 Musterstadt</p>
+      <p>+49 123 456789<br>info@beispiel.de</p>
+    </div>
+    <div>
+      <h4>FOLGE UNS</h4>
+      <p>
+        <img src="1940929_facebook_media_online_social_icon.png" alt="Facebook" width="20"> Facebook<br>
+        <img src="1940915_media_online_social_twitter_icon.png" alt="Twitter" width="20"> Twitter<br>
+        <img src="1940923_linkedin_media_online_social_icon.png" alt="LinkedIn" width="20"> LinkedIn<br>
+        <img src="1940911_media_online_play_social_youtube_icon.png" alt="YouTube" width="20"> YouTube
+      </p>
+    </div>
+    <div>
+      <h4>NEWSLETTER</h4>
+      <p>Abonnieren Sie unseren Newsletter</p>
+      <input type="email" placeholder="E-Mail Adresse">
+      <button>ABONNIEREN</button>
+    </div>
   </div>
-  <div>
-    <h4>Kontakt</h4>
-    <p>Musterstr. 123<br>12345 Musterstadt</p>
-    <p>+49 123 456789<br>info@beispiel.de</p>
-  </div>
-  <div>
-    <h4>Folge uns</h4>
-    <p>🔗 Facebook<br>🔗 Twitter<br>🔗 LinkedIn</p>
-  </div>
-  <div>
-    <h4>Newsletter</h4>
-    <p>Abonnieren Sie unseren Newsletter</p>
-    <input type="email" placeholder="E-Mail Adresse">
-    <button>ABONNIEREN</button>
+  <div style="margin-top: 40px; text-align: center; font-size: 12px;">
+    <p>© 2025 Beispiel GmbH     <a href="#">Datenschutz</a>   |   <a href="#">Impressum</a></p>
   </div>
 </footer>
-<div class="copyright">
-  © 2025 Beispiel GmbH &nbsp; | &nbsp; <a href="#">Datenschutz</a> &nbsp; | &nbsp; <a href="#">Impressum</a>
-</div>
-
-</body>
-</html>
